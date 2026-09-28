@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+output/*.pdf
+output/_render_*.html
+uploads/
+assets/mascot/_preview.png

@@ -1,0 +1,12 @@
+# Render "Blueprint" 설정 파일. Render 대시보드에서 이 저장소를 연결하면
+# 이 파일을 읽어서 아래 설정대로 서비스를 자동으로 만들어준다.
+# (수동으로 New Web Service를 눌러 설정해도 되고, 이 파일이 있으면
+#  "New Blueprint Instance" 한 번으로 자동 세팅됨)
+services:
+  - type: web
+    name: palm-report
+    runtime: docker
+    plan: free
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false   # 값은 대시보드에서 직접 입력(이 파일에는 절대 안 적음)

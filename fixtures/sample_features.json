@@ -1,0 +1,79 @@
+{
+  "_comment": "이 파일은 '비전 분석 API 호출' 결과를 흉내 낸 목(mock) 데이터입니다. 실제 서비스에서는 src/vision_analysis.py 의 analyze_palm_images() 가 Anthropic API를 호출해 이 구조와 동일한 JSON을 실시간으로 만들어냅니다.",
+  "customer": {
+    "name": "홍길동",
+    "job_context": "1인 온라인 쇼핑몰 운영, 창업 3년차",
+    "concern": "매출은 있는데 현금이 안 모인다"
+  },
+  "hand_shape": {
+    "type": "바람형",
+    "type_desc": "네모난 손바닥 + 긴 손가락",
+    "keywords": ["논리", "언어", "구조로 이해하는 사람"],
+    "palm_width_to_length_ratio": 0.81,
+    "finger_to_palm_ratio": 0.98
+  },
+  "scores": {
+    "생명력": 74,
+    "사고력": 88,
+    "감정": 60,
+    "재물": 52,
+    "직업운": 79,
+    "인연": 66
+  },
+  "lines": {
+    "life": {
+      "name": "생명선",
+      "start_hint": "엄지-검지 사이",
+      "path_hint": "엄지 뿌리를 넓게 감싸며 손목 방향",
+      "length_ratio": 0.80,
+      "thickness": "두꺼움",
+      "breaks": 0,
+      "island_count": 0,
+      "confidence": "확신"
+    },
+    "head": {
+      "name": "두뇌선",
+      "start_hint": "생명선과 거의 같은 자리",
+      "path_hint": "손바닥을 가로질러 손날 쪽으로, 완만하게 하강",
+      "length_ratio": 0.79,
+      "thickness": "굵음",
+      "slope": "중반부터 완만히 하강",
+      "end_split": true,
+      "confidence": "확신"
+    },
+    "heart": {
+      "name": "감정선",
+      "start_hint": "손날 쪽",
+      "path_hint": "검지와 중지 사이 방향으로 상승",
+      "length_ratio": 0.58,
+      "branching": "끝부분 여러 갈래로 흐려짐",
+      "confidence": "보통"
+    },
+    "fate": {
+      "name": "운명선",
+      "start_hint": "손목 부근, 시작점 흐림",
+      "path_hint": "중지 뿌리 방향으로 상승",
+      "break_points": ["두뇌선과 만나는 높이"],
+      "confidence": "보통"
+    },
+    "sun": {
+      "name": "태양선",
+      "path_hint": "약지 뿌리 아래 짧게",
+      "length_ratio": 0.14,
+      "confidence": "낮음"
+    },
+    "money": {
+      "name": "재물선",
+      "path_hint": "새끼손가락 뿌리 아래 여러 갈래 잔금",
+      "count": 3,
+      "length_ratio": 0.10,
+      "confidence": "낮음"
+    }
+  },
+  "timeline_segments": [
+    {"age_range": "18-25", "label": "기초 다지기", "basis": "생명선 초반 구간, 굵기 변화 없음"},
+    {"age_range": "26-32", "label": "자리 만들기", "basis": "생명선이 두꺼워지는 지점과 운명선 상승 시작이 겹침"},
+    {"age_range": "33-38", "label": "구조 개편", "basis": "운명선이 두뇌선과 만나는 높이에서 한 번 흐려졌다 다시 짙어짐"},
+    {"age_range": "39-47", "label": "쌓이는 시기", "basis": "생명선 안쪽 지선 시작 이후 구간"}
+  ]
+}

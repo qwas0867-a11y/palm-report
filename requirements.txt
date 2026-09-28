@@ -1,0 +1,11 @@
+anthropic>=0.40.0
+jinja2>=3.1
+playwright==1.56.0
+matplotlib>=3.8
+pillow>=10.0
+json-repair>=0.30 # LLM이 만든 JSON의 사소한 문법 오류(따옴표, 콤마 등) 자동 복구
+flask>=3.0        # 고객 입력 폼(templates/intake.html)을 받아주는 웹 서버
+gunicorn>=22.0     # 배포용 프로덕션 서버(로컬 python3 app.py 는 개발용 서버라 배포에는 안 씀)
+
+# 아래는 개발/미리보기 확인용이며 실제 서비스 운영에는 불필요:
+# pdf2image>=1.17  (PDF -> PNG 미리보기 변환, poppler-utils 시스템 패키지 필요)
